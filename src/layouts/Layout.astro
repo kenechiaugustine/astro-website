@@ -1,3 +1,11 @@
+---
+export interface Props {
+    title?: string;
+}
+const { title = 'Astro Crash course' } = Astro.props as Props
+
+---
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,12 +18,12 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css" />
-        <title>Astro Crash Course</title>
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <title>{ title }</title>
     </head>
-    <body> 
+    <body>
 
-        
+        <slot />
 
     </body>
 </html>
