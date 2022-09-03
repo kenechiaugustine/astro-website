@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
 import Features from "../components/Features.astro";
 import Tabs from "../components/Tabs.astro";
+
 ---
 
 <Layout>
@@ -18,13 +19,13 @@ import Tabs from "../components/Tabs.astro";
 
 			<h3>Start Building</h3>
 
-			<Tabs 
-				headings = { ['NPM', 'PNPM', 'YARN'] }
-				contents = { [ 
-					'$ npm create astro@latest --kenny',
-					'$ pnpm create astro@latest',
-					'$ yarn create astro --fav'
-				] }
+			<Tabs
+				headings={["NPM", "PNPM", "YARN"]}
+				contents={[
+					"$ npm create astro@latest --kenny",
+					"$ pnpm create astro@latest",
+					"$ yarn create astro --fav",
+				]}
 			/>
 
 			<p>
