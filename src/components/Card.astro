@@ -5,12 +5,11 @@ export interface CardProps {
     dark?: boolean;
 }
 
-const { title, body, dark = false } = Astro.props as CardProps;
+const {dark = false } = Astro.props as CardProps;
 ---
 
 <div class={`card ${dark && 'dark'}`}>
-    <h3>{title}</h3>
-    <p>{body}</p>
+   <slot />
 </div>
 
 <style>
