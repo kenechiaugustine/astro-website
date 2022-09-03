@@ -1,4 +1,6 @@
 ---
+import Card from "./Card.astro";
+
 const features = [
     {
         title: "Zero JavaScript Runtime",
@@ -19,10 +21,7 @@ const features = [
     <div class="container">
         {
             features.map((feature) => (
-                <div class="card">
-                    <h3>{feature.title}</h3>
-                    <p>{feature.body}</p>
-                </div>
+                <Card title={feature.title} body={feature.body} />
             ))
         }
     </div>
@@ -37,11 +36,9 @@ const features = [
         margin: 30px auto;
     }
 
-    .card {
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+    @media (max-width: 670px) {
+        .features .container {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
