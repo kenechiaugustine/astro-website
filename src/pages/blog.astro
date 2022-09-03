@@ -6,7 +6,7 @@ import Showcase from "../components/Showcase.astro";
 const posts = await Astro.glob("../articles/*.md");
 ---
 
-<Layout>
+<Layout title="Astro Blog page">
     <Showcase heading="Astro Blog" text="A simple blog built with Astro" />
     <section class="page-content">
         <div class="container">
